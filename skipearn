@@ -1,0 +1,89 @@
+
+
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium import webdriver
+    from selenium.webdriver.support.ui import Select
+    from selenium.common.exceptions import NoSuchElementException 
+    import time
+    import random
+    import re
+    
+    from webdriver_manager.chrome import ChromeDriverManager
+    from webdriver_manager.chrome import ChromeDriverManager
+    from webdriver_manager.core.utils import ChromeType
+    driver = webdriver.Chrome(executable_path =ChromeDriverManager().install())
+    driver.maximize_window()
+    time.sleep(5)
+    
+ 
+ adfly_link =   driver.get("http://usheethe.com/bxCg")
+  continue_popup = driver.find_element(By.XPATH, "//button[@id='abC']").click()
+    def check_exists_by_xpath(xpath):
+        try:
+            driver.find_element(By.XPATH, "//button[@id='abC']").click()
+        except NoSuchElementException:
+            return False
+        return True
+    time.sleep(5)
+    
+    adfly_skip = driver.find_element(By.XPATH, "//img[@alt='Skip Ad']").click()
+    
+    
+    
+   
+    time.sleep(7)
+    for handle in driver.window_handles:
+        driver.switch_to.window(handle)
+        driver.close()
+    
+    
+
+
+.. parsed-literal::
+
+    
+    
+
+.. parsed-literal::
+
+    [WDM] - ====== WebDriver manager ======
+    [WDM] - Current google-chrome version is 102.0.5005
+    [WDM] - Get LATEST chromedriver version for 102.0.5005 google-chrome
+    [WDM] - Driver [C:\Users\servantofallah\.wdm\drivers\chromedriver\win32\102.0.5005.61\chromedriver.exe] found in cache
+    C:\Users\servantofallah\AppData\Local\Temp\ipykernel_14264\2731854519.py:14: DeprecationWarning: executable_path has been deprecated, please pass in a Service object
+      driver = webdriver.Chrome(executable_path =ChromeDriverManager().install())
+    
+
+.. code:: ipython3
+
+    #driver = webdriver.Chrome(executable_path =ChromeDriverManager().install())
+    #driver.maximize_window()
+    #time.sleep(5)
+    #adfly_link =   driver.get("http://usheethe.com/bxCg")
+    #time.sleep(7)
+    #continue_popup = driver.find_element(By.XPATH, "//button[@id='abC']").click()
+    #adfly_skip = driver.find_element(By.XPATH, "//img[@alt='Skip Ad']").click()
+    #time.sleep(7)
+    
+
+.. code:: ipython3
+
+    #time.sleep(7)
+    #continue_popup = driver.find_element(By.XPATH, "//button[@id='abC']").click()
+
+.. code:: ipython3
+
+    #adfly_skip = driver.find_element(By.XPATH, "//img[@alt='Skip Ad']").click()
+    
+
+.. code:: ipython3
+
+    #time.sleep(7)
+
+.. code:: ipython3
+
+    #for handle in driver.window_handles:
+       # driver.switch_to.window(handle)
+       # driver.close()
